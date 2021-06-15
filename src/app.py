@@ -31,9 +31,7 @@ def lambda_handler(event, context):
     # return count
 
     return {
-        #"statusCode": 200,
-        #"headers": {},
-        #"body": json.dumps(decimal.Decimal(count), default=decimal_default)
+        "statusCode": 200,
         'headers': {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
