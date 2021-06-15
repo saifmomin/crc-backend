@@ -4,7 +4,7 @@ import os
 
 print('Loading function')
 
-# Creating the DynamoDB Client
+# Creating the DynamoDB Client outside handler
 region_name = os.environ['REGION_NAME']
 dynamo = boto3.client('dynamodb', region_name=region_name)
 table_name = os.environ['TABLE_NAME']

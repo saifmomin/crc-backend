@@ -62,7 +62,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         result = update_visitor("guest", self.dynamodb)
 
         self.assertEqual("guest", get_visitor("guest", self.dynamodb)['visitor'])
-        self.assertEqual(4, get_visitor("guest", self.dynamodb)['counts'])
+        self.assertEqual(3, get_visitor("guest", self.dynamodb)['counts'])
         # pprint(result, sort_dicts=False)
 
 
