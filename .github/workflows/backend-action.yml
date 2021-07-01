@@ -37,7 +37,7 @@ jobs:
   
   
   
-  packageanddeploy:
+  package-and-deploy:
 
     runs-on: ubuntu-latest
     
