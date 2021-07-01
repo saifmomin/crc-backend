@@ -72,3 +72,6 @@ jobs:
     - name: SAM Package
       run: |
         sam package --s3-bucket rc-back --template-file template.yaml --output-template-file out/packaged.yaml
+    - name: SAM Deploy
+      run: |
+        sam deploy --template-file /home/runner/work/rc-backend/rc-backend/out/packaged.yaml --stack-name website --capabilities CAPABILITY_IAM
