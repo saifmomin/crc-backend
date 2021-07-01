@@ -32,7 +32,9 @@ Resources:
       PrimaryKey:
         Name: website
         Type: String
+      #On Demand Billing Mode
       #BillingMode: PAY_PER_REQUEST
+      #Provisioned Billing Mode
       ProvisionedThroughput:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
