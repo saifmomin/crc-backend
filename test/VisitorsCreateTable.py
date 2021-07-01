@@ -15,13 +15,13 @@ def create_visitor_table(dynamodb=None):
         TableName='Visitors',
         KeySchema=[
             {
-                'AttributeName': 'visitor',
+                'AttributeName': 'website',
                 'KeyType': 'HASH'
             }
         ],
         AttributeDefinitions=[
             {
-                'AttributeName': 'visitor',
+                'AttributeName': 'website',
                 'AttributeType': 'S'
             }
         ],

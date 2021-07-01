@@ -2,15 +2,15 @@
 
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: A visit tracker AWS Lambda function.
+Description: Resume Website.
 Resources:
-  trackvisits:
+  sitevisits:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: app.lambda_handler
       Runtime: python3.8
       CodeUri: src/
-      Description: A visit tracker AWS Lambda function.
+      Description: A website visit tracker AWS Lambda function.
       MemorySize: 128
       Timeout: 3
       Environment:
@@ -30,7 +30,7 @@ Resources:
     Type: AWS::Serverless::SimpleTable
     Properties:
       PrimaryKey:
-        Name: visitor
+        Name: website
         Type: String
       #BillingMode: PAY_PER_REQUEST
       ProvisionedThroughput:

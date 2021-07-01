@@ -8,14 +8,14 @@ import boto3
 from botocore.exceptions import ClientError
 
 
-def get_visitor(visitor, dynamodb=None):
+def get_visitor(website, dynamodb=None):
     if not dynamodb:
         dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
 
     table = dynamodb.Table('Visitors')
 
     try:
-        response = table.get_item(Key={'visitor': 'guest'})
+        response = table.get_item(Key={'website': 'saifmomin.net'})
     except ClientError as e:
         print(e.response['Error']['Message'])
     else:
@@ -23,7 +23,7 @@ def get_visitor(visitor, dynamodb=None):
 
 
 if __name__ == '__main__':
-    visitor = get_visitor("guest")
+    visitor = get_visitor("saifmomin.net")
     if visitor:
         print("Get visitor succeeded:")
         pprint(visitor, sort_dicts=False)
