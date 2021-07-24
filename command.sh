@@ -16,6 +16,6 @@ aws2 dynamodb update-table --table-name website-Table-Y7HZHCOX6DY --billing-mode
 #Git
 git status
 git add .
-git commit -m ""
+git commit -m "Initial commit"
 git push
 git pull --rebase
