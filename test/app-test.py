@@ -47,8 +47,6 @@ class TestDatabaseFunctions(unittest.TestCase):
         put_visitor("saifmomin.net", 1, self.dynamodb)
         result = get_visitor("saifmomin.net", self.dynamodb)
 
-        # self.assertEqual('saifmomin.net', result[‘visitor’])
-        # self.assertEqual(1, result[‘counts’])
         self.assertEqual("saifmomin.net", get_visitor("saifmomin.net", self.dynamodb)['website'])
         self.assertEqual(1, get_visitor("saifmomin.net", self.dynamodb)['visits'])
         # pprint(result, sort_dicts=False)

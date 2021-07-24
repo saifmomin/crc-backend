@@ -27,8 +27,6 @@ def lambda_handler(event, context):
                               )
 
     count = response['Item']['visits']
-    print(count)
-    # return count
 
     # Return format as expected by API Gateway
     return {
