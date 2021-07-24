@@ -4,12 +4,12 @@ import os
 
 print('Loading function')
 
-# Create the DynamoDB Client outside handler
+# Create the DynamoDB client
 region_name = os.environ['REGION_NAME']
 dynamo = boto3.client('dynamodb', region_name=region_name)
 table_name = os.environ['TABLE_NAME']
 
-
+# Define Lambda handler
 def lambda_handler(event, context):
     # Create the DynamoDB Table Resource
     dynamodb = boto3.resource('dynamodb')
