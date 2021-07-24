@@ -6,8 +6,7 @@ sam package --s3-bucket rc-back --template-file template.yaml --output-template-
 
 #deploy sam
 sam deploy --template-file out/packaged.yaml --stack-name website --capabilities CAPABILITY_IAM
-
-sam deploy --template-file /home/runner/work/rc-backend/rc-backend/out/packaged.yaml --stack-name website --capabilities CAPABILITY_IAM
+sam deploy --template-file /home/runner/work/crc-backend/crc-backend/out/packaged.yaml --stack-name website --capabilities CAPABILITY_IAM
 
 #On-Demand billing mode [BillingMode: PAY_PER_REQUEST]. This is not working with SAM template.
 aws2 dynamodb update-table --table-name website-Table-Y7HZHCOX6DY --billing-mode PAY_PER_REQUEST
