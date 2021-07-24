@@ -1,2 +1,2 @@
 # rc-backend
-A Backend repo for Resume Challenge 
+A Backend repo for Cloud Resume Challenge.
