@@ -1,2 +1,2 @@
 # rc-backend
-A Private Backend repo for Resume Challenge 
+A Backend repo for Resume Challenge 
